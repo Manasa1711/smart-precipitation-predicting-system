@@ -589,65 +589,6 @@ def create_weather_features(df):
 </table>
 
 
-## 👨‍💻 Author
 
-<div align="center">
 
-### **Vishnu Nandan**
-*Aspiring Data Scientist | AI & ML Enthusiast*
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/jonnalagaddavishnu/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://github.com/Vishnunandan24"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="mailto:vishnunandan24@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-</p>
-
-*"Transforming data into insights, one model at a time"*
-
-</div>
-
-## ⭐ Support This Project
-
-<div align="center">
-
-### 🌟 Show Your Support!
-
-If you found this project helpful or interesting, please consider:
-
-<p align="center">
-  <a href="https://github.com/Vishnunandan24/weather-precipitation-classification/stargazers">
-    <img src="https://img.shields.io/github/stars/Vishnunandan24/weather-precipitation-classification?style=social&label=Star&maxAge=2592000" alt="GitHub Stars"/>
-  </a>
-  <a href="https://github.com/Vishnunandan24/weather-precipitation-classification/network/members">
-    <img src="https://img.shields.io/github/forks/Vishnunandan24/weather-precipitation-classification?style=social&label=Fork&maxAge=2592000" alt="GitHub Forks"/>
-  </a>
-  <a href="https://github.com/Vishnunandan24/weather-precipitation-classification/watchers">
-    <img src="https://img.shields.io/github/watchers/Vishnunandan24/weather-precipitation-classification?style=social&label=Watch&maxAge=2592000" alt="GitHub Watchers"/>
-  </a>
-</p>
-
-### 💝 Ways to Support
-- ⭐ **Star** this repository
-- 🍴 **Fork** and contribute
-- 🐛 **Report** bugs and issues
-- 📢 **Share** with the community
-- 💡 **Suggest** new features
-
-</div>
-
----
-
-<div align="center">
-
-### 💭 *"In a world full of data, smart decisions come from smart models."*
-
-<img src="https://forthebadge.com/images/badges/built-with-love.svg"/>
-<img src="https://forthebadge.com/images/badges/made-with-python.svg"/>
-
-**Happy Weather Forecasting! 🌤️**
-
----
-
-*Made with ❤️ by [Vishnu Nandan](https://github.com/Vishnunandan24) | © 2025 Weather Intelligence System*
-
-</div>
