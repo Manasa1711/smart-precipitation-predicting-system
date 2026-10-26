@@ -14,9 +14,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/Vishnunandan24/weather-precipitation-classification?style=flat-square&color=yellow"/>
-  <img src="https://img.shields.io/github/forks/Vishnunandan24/weather-precipitation-classification?style=flat-square&color=green"/>
-  <img src="https://img.shields.io/github/issues/Vishnunandan24/weather-precipitation-classification?style=flat-square&color=red"/>
+  <img src="https://img.shields.io/github/stars/Manasa1711/Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts?style=flat-square&color=yellow"/>
+  <img src="https://img.shields.io/github/forks/Manasa1711/Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts?style=flat-square&color=green"/>
+  <img src="https://img.shields.io/github/issues/Manasa1711/Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts?style=flat-square&color=red"/>
 </p>
 
 ---
@@ -151,7 +151,7 @@ graph TB
 
 ---
 
-🎪 Live Demo
+## 🎪 Live Demo
 <div align="center">
 🌐 Experience the System Live
 <div align="center">
@@ -178,21 +178,21 @@ python --version
 
 ### 2️⃣ Clone Repository
 ```bash
-git clone https://github.com/Vishnunandan24/Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts.git
-cd Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts.git
+git clone https://github.com/Manasa1711/Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts.git
+cd Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts
 ```
 
-### 4️⃣ Install Dependencies
+### 3️⃣ Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5️⃣ Launch Application
+### 4️⃣ Launch Application
 ```bash
 streamlit run app.py
 ```
 
-### 6️⃣ Access Dashboard
+### 5️⃣ Access Dashboard
 Open your browser and navigate to: `http://localhost:8501`
 
 </details>
@@ -436,7 +436,7 @@ def generate_intelligent_alert(prediction, probability, humidity_trend):
     """
     if prediction == "Rain" and probability > 0.90:
         if humidity_trend > 80:
-        return "🚨 HIGH RISK: Rainfall Alert - Stay Safe"
+            return "🚨 HIGH RISK: Rainfall Alert - Stay Safe"
     
     elif prediction == "Snow" and probability > 0.85:
         return "❄️ WINTER ALERT: Snowfall Expected - Travel Caution"
@@ -588,7 +588,16 @@ def create_weather_features(df):
 </tr>
 </table>
 
+---
 
+## 👩‍💻 Author
 
+<div align="center">
 
+**Mukkara Manasa**
 
+B.Tech Computer Science and Engineering, Lovely Professional University
+
+📧 [manasamukkara1711@gmail.com](mailto:manasamukkara1711@gmail.com) &nbsp;|&nbsp; 🔗 [LinkedIn](https://www.linkedin.com/in/manasa-mukkara-77290824a) &nbsp;|&nbsp; 💻 [GitHub](https://github.com/Manasa1711)
+
+</div>
