@@ -7,16 +7,15 @@
   <img src="https://img.shields.io/badge/Machine_Learning-00D2FF?style=for-the-badge&logo=tensorflow&logoColor=white&labelColor=0099CC"/>
   <img src="https://img.shields.io/badge/Time_Series-FF6B6B?style=for-the-badge&logo=chartdotjs&logoColor=white&labelColor=CC5555"/>
   <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black&labelColor=CC9900"/>
-  <img src="https://img.shields.io/badge/Status-Production_Ready-00C851?style=for-the-badge&logo=checkmarx&logoColor=white&labelColor=009639"/>
   <img src="https://img.shields.io/badge/Data_Science-4B8BBE?style=for-the-badge&logo=python&logoColor=white&labelColor=306998"/>
   <img src="https://img.shields.io/badge/Data_Analysis-FF6B35?style=for-the-badge&logo=pandas&logoColor=white&labelColor=CC5429"/>
   <img src="https://img.shields.io/badge/EDA-11557c?style=for-the-badge&logo=matplotlib&logoColor=white&labelColor=7B1FA2"/>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/Manasa1711/Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts?style=flat-square&color=yellow"/>
-  <img src="https://img.shields.io/github/forks/Manasa1711/Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts?style=flat-square&color=green"/>
-  <img src="https://img.shields.io/github/issues/Manasa1711/Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts?style=flat-square&color=red"/>
+  <img src="https://img.shields.io/github/stars/Manasa1711/smart-precipitation-predicting-system?style=flat-square&color=yellow"/>
+  <img src="https://img.shields.io/github/forks/Manasa1711/smart-precipitation-predicting-system?style=flat-square&color=green"/>
+  <img src="https://img.shields.io/github/issues/Manasa1711/smart-precipitation-predicting-system?style=flat-square&color=red"/>
 </p>
 
 ---
@@ -103,7 +102,7 @@ Transform weather data into **actionable intelligence** through advanced machine
 |----------|-------------|
 | **🧠 Machine Learning** | ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) |
 | **🤖 Generative AI** | ![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black) ![Transformers](https://img.shields.io/badge/Transformers-FF6F00?style=flat-square&logo=pytorch&logoColor=white) |
-| **📊 Visualization** | ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat-square&logo=matplotlib&logoColor=black) ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=flat-square&logo=seaborn&logoColor=black) ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white) |
+| **📊 Visualization** | ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat-square&logo=matplotlib&logoColor=black) ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=flat-square&logo=seaborn&logoColor=black) |
 | **🌐 Web Framework** | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white) |
 | **📈 Time Series** | ![Statsmodels](https://img.shields.io/badge/Statsmodels-8CAAE6?style=flat-square&logo=scipy&logoColor=white) |
 | **☁️ Deployment** | ![Streamlit Cloud](https://img.shields.io/badge/Streamlit_Cloud-FF4B4B?style=flat-square&logo=streamlit&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) |
@@ -178,8 +177,8 @@ python --version
 
 ### 2️⃣ Clone Repository
 ```bash
-git clone https://github.com/Manasa1711/Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts.git
-cd Smart-Precipitation-Classification-and-Forecasting-System-with-Risk-Alerts
+git clone https://github.com/Manasa1711/smart-precipitation-predicting-system.git
+cd smart-precipitation-predicting-system
 ```
 
 ### 3️⃣ Install Dependencies
@@ -189,7 +188,7 @@ pip install -r requirements.txt
 
 ### 4️⃣ Launch Application
 ```bash
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
 ### 5️⃣ Access Dashboard
@@ -241,10 +240,9 @@ Open your browser and navigate to: `http://localhost:8501`
 Our forecasting system utilizes **ARIMA (AutoRegressive Integrated Moving Average)** to predict humidity :
 
 #### 🔬 **Technical Specifications**
-- **Model Type**: ARIMA(p,d,q) with automated parameter selection
+- **Model Type**: ARIMA with order (3, 1, 0), built with Statsmodels
 - **Forecast Horizon**: 3-day rolling predictions
-- **Confidence Intervals**: 95% statistical confidence bounds
-- **Update Frequency**: Real-time with each new data point (used 1st 5 samples) 
+- **Input**: Humidity values from the weather dataset
 
 ---
 
@@ -487,7 +485,6 @@ Our user-friendly interface provides comprehensive weather intelligence through 
 ### 📈 **Forecast Studio**
 - ARIMA predictions
 - Trend visualization
-- Confidence intervals
 
 </td>
 <td width="25%" align="center">
@@ -515,32 +512,28 @@ Our user-friendly interface provides comprehensive weather intelligence through 
 <details>
 <summary><b>🔬 Advanced Technical Details</b></summary>
 
-### ⚙️ **Feature Engineering Pipeline**
+### ⚙️ **Feature Engineering**
 
-```python
-def create_weather_features(df):
-    """
-    Advanced feature engineering for weather prediction
-    """
-    # Rolling statistics
-    df['humidity_ma_7'] = df['humidity'].rolling(window=7).mean()
-    df['humidity_std_7'] = df['humidity'].rolling(window=7).std()
-    
-    # Lag features
-    df['humidity_lag_1'] = df['humidity'].shift(1)
-    df['humidity_lag_3'] = df['humidity'].shift(3)
-    
-    # Interaction features
-    df['temp_humidity_interaction'] = df['temperature'] * df['humidity']
-    df['pressure_humidity_ratio'] = df['pressure'] / df['humidity']
-    
-    # Seasonal decomposition
-    decomposition = seasonal_decompose(df['humidity'], model='additive')
-    df['humidity_trend'] = decomposition.trend
-    df['humidity_seasonal'] = decomposition.seasonal
-    
-    return df
-```
+Features used by the models:
+
+| Feature | How it is created |
+|---------|-------------------|
+| Temperature (C), Humidity, Wind Speed (km/h) | Taken from the dataset |
+| `temp_diff` | Difference between temperature and its 3-reading rolling average |
+| `humidity_index` | Humidity × Wind Speed |
+| `rolling_precip_3` | 3-reading rolling average of Humidity |
+
+All features are scaled with `StandardScaler` before training. Trained models are saved as `.pkl` files with `joblib`.
+
+### 📁 **Project Files**
+
+| File | Purpose |
+|------|---------|
+| `weatherPrecipitation.py` | Data cleaning, feature creation and model training |
+| `streamlit_app.py` | Streamlit dashboard: predictions, alerts, ARIMA forecast and natural-language queries |
+| `*_model.pkl`, `scaler.pkl` | Saved trained models and scaler |
+| `weatherHistory.csv` | Dataset (96,000+ hourly weather records) |
+| `requirements.txt` | Python packages |
 </details>
 
 ---
